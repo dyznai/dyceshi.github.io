@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼎耀智能科技</title>
+
+
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        /* 顶部广告样式 */
+        .top-ad {
+            background-color: #e5e7eb;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        .top-ad a {
+            color: #4b5563;
+        }
+
+        .top-ad a:hover {
+            color: #111827;
+        }
+
+        /* 黑色导航栏样式 */
+        .black-nav {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .black-nav .container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+        }
+
+        .black-nav ul {
+            display: flex;
+            gap: 1rem;
+            list-style-type: none;
+        }
+
+        .black-nav a {
+            color: #fff;
+
+        }
+
+        .black-nav a:hover {
+            color: #d1d5db;
+        }
+
+        .black-nav .relative {
+            position: relative;
+        }
+
+        .black-nav .hidden {
+            display: none;
+        }
+
+        .black-nav .absolute {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            color: #000;
+            padding: 0.5rem;
+        }
+
+        /* 白色导航栏样式 */
+        .white-nav {
+            background-color: #fff;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .white-nav .container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        }
+
+        .white-nav .container > * {
+          margin-left: 2rem; /* 增加左侧间隔 */
+         margin-right: 2rem; /* 增加右侧间隔 */
+        }
+
+        .white-nav .LOGO img {
+            height: 2.5rem;
+        }
+
+        .white-nav .nav-bar ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .white-nav .nav-bar a {
+            color: #4b5563;
+        }
+
+        .white-nav .nav-bar a:hover {
+            color: #111827;
+        }
+
+        .white-nav .search {
+            display: flex;
+        }
+
+        .white-nav .search input {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 0.75rem;
+            border-top-left-radius: 0.375rem;
+            border-bottom-left-radius: 0.375rem;
+        }
+
+        .white-nav .search button {
+            background-color: #266a98;
+            color: #fff;
+            padding: 0.75rem 1rem;
+            border-top-right-radius: 0.375rem;
+            border-bottom-right-radius: 0.375rem;
+        }
+
+        .white-nav .search button:hover {
+            background-color: #25eb3c;
+        }
+
+        /* 图片展示区域样式 */
+        .image-display {
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .image-display img {
+            width: 800px;
+            height: 500px;
+        }
+
+        /* 案例展示链接样式 */
+        .case-links {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .case-links a {
+            background-color: #e5e7eb;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            margin-top: 5px;
+        }
+
+        .case-links a:hover {
+            background-color: #d1d5db;
+            
+        }
+
+        /* 公司名称样式 */
+        .company-name {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查 localStorage 中的 jiance 变量
+            var jiance = localStorage.getItem('jiance');
+            
+            // 如果 jiance 不是 true，则跳转到登录页面
+            if (jiance !== 'true') {
+                window.location.href = 'dengluceshi.html';
+            }
+        });
+    </script>
+    <!-- 顶部广告 start -->
+    <div class="top-ad">
+        <a href="#">销 售 及 售 后 服 务 热 线 ： 刘 经 理 ： 1 8 1 9 0 0 3 0 0 0</a>
+    </div>
+    <!-- 顶部广告 end -->
+
+    <!-- 导航栏 start -->
+    <div class="black-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">产品</a></li>
+                <li><a href="#">应用案例</a></li>
+                <li><a href="shipinceshi.html">视频</a></li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="http://192.168.1.164:5000/#">下载</a></li>
+                <li class="relative">
+                    <a href="#">联系我们</a>
+                    <div class="absolute hidden">
+                        <img src="./img/tooopen2w2.bmp" alt="">
+                    </div>
+                </li>
+                <li><a href="guanyvwomen.html">关于我们</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 导航栏 end -->
+
+    <!-- 白色导航 start -->
+    <div class="white-nav">
+        <div class="container">
+            <div class="LOGO">
+                <img src="img/未命名(7).png" alt="lo">
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="#">应用案例</a></li>
+                    <li><a href="#">设计预览</a></li>
+                    <li><a href="#">鼎耀</a></li>
+                    <li><a href="#">鼎耀</a></li>
+                    <li><a href="#">鼎耀</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="请输入">
+                <button>搜索</button>
+            </div>
+        </div>
+    </div>
+    <!-- 白色导航 end -->
+    <div class="case-links">
+        <a href="#" id="dabiaojizhanshi">激光打标机</a>
+        <a href="#" id="zhongpinlulaozhazhanshi">中频炉捞渣</a>
+        <a href="#" id="shujvjiancezhanshi">数据监测</a>
+        <a href="#" id="yuanbangxiacijiancezhanshi">圆棒瑕疵检测</a>
+        <a href="#" id="daogandabiaozhanshi">导杆打标</a>
+        <a href="#" id="lintiezidongqinglizhanshi">磷铁自动清理</a>
+    </div>
+
+    <div class="image-display">
+        <img id="dabiaoji" src="./img/打标机整体布局渲染图.JPG" alt="">
+    </div>
+
+
+
+    <div class="company-name">
+        <p>鼎耀智能科技</p>
+    </div>
+
+    <script>
+        // 获取元素
+        var changeImageLink = document.getElementById('zhongpinlulaozhazhanshi');
+        var mainImage = document.getElementById('dabiaoji');
+        var LABLE1 = document.getElementById('dabiaojizhanshi');
+        var LABLE2 = document.getElementById('shujvjiancezhanshi');
+        var LABLE3 = document.getElementById('yuanbangxiacijiancezhanshi');
+        var LABLE4 = document.getElementById('daogandabiaozhanshi');
+        var LABLE5 = document.getElementById('lintiezidongqinglizhanshi');
+
+        // 添加点击事件监听器
+        changeImageLink.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止链接默认行为
+            mainImage.src = './img/中频炉捞渣.jpg'; // 替换图片源
+        });
+
+        LABLE1.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止链接默认行为
+            mainImage.src = './img/打标机整体布局渲染图.jpg'; // 替换图片源
+        });
+
+        LABLE2.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止链接默认行为
+            mainImage.src = './img/数据监测.jpg'; // 替换图片源
+        });
+
+        LABLE3.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止链接默认行为
+            mainImage.src = './img/圆棒检测.jpg'; // 替换图片源
+        });
+
+        LABLE4.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止链接默认行为
+            mainImage.src = './img/导杆打标.png'; // 替换图片源
+        });
+
+        LABLE5.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止链接默认行为
+            mainImage.src = './img/除铁豆.jpg'; // 替换图片源
+        });
+        
+    </script>
+</body>
+
+</html>
+    
