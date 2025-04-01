@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Registration Form</title>
+<style>
+ body {
+     font-family: Arial, sans-serif;
+ }
+
+ .container {
+     max-width: 400px;
+     margin: 50px auto;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+
+ .form-group {
+     margin-bottom: 15px;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 5px;
+ }
+
+ .form-group input {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ddd;
+     border-radius: 4px;
+ }
+
+ .form-group button {
+     width: 100%;
+     padding: 10px;
+     border: none;
+     background-color: #5cb85c;
+     color: white;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ .form-group button:hover {
+     background-color: #4cae4c;
+ }
+
+ .error-message {
+     color: red;
+     display: none;
+     margin-bottom: 15px;
+ }
+</style>
+</head>
+<body>
+    
+ <div class="container">
+     <div class="error-message" id="errorBox">账号密码错误</div>
+     <form id="loginForm">
+         <h2>登录</h2>
+         <div class="form-group">
+             <label for="loginUsername">账号:</label>
+             <input type="text" id="loginUsername" name="username" required>
+         </div>
+         <div class="form-group">
+             <label for="loginPassword">密码:</label>
+             <input type="password" id="loginPassword" name="password" required>
+         </div>
+         <div class="form-group">
+             <button type="submit">登录</button>
+         </div>
+     </form>
+ </div>
+
+ <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var username = document.getElementById('loginUsername').value;
+        var password = document.getElementById('loginPassword').value;
+        var validAccounts = ['DYAIDA', 'DYAIYV', 'DYAILONG', 'DYAIXIAO'];
+        var validPassword = '18519003000';
+        let jiance = false; // 使用 let 声明变量，并赋初始值 false
+   
+        if (validAccounts.includes(username) && password === validPassword) {
+            jiance = true; // 登录成功，设置 jiance 为 true
+            localStorage.setItem('jiance', 'true'); // 将登录状态保存到 localStorage
+            window.location.href = 'indexceshi.html'; // 跳转到 indexceshi.html 页面
+        } else {
+            document.getElementById('errorBox').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('errorBox').style.display = 'none';
+            }, 3000);
+            jiance = false; // 登录失败，设置 jiance 为 false
+            localStorage.setItem('jiance', 'false'); // 更新 localStorage 中的登录状态
+        }
+    });
+   </script>
+   
+</body>
+</html>
